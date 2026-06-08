@@ -1214,351 +1214,45 @@ if (Q.percentComplete >= 100) {
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
+> *"Fellow Senators, friends, colleagues, allies, adversaries. I stand before you this morning with a heavy heart. I’ve spent my life in this chamber. I came here as a child. And as I look around now, I realize I have almost no memories that pre-date my arrival and few bonds of affection that cleave so tightly. Through these many years, I believe I have served my constituents honorably and upheld our code of conduct. This chamber is a cauldron of opinions and we’ve certainly all had our patience and tempers tested in pursuit of our ideals. Disagree as we might, I am hopeful that those of you who know me will vouch for my credibility in the days to come. I stand this morning with a difficult message. I believe we are in crisis. The distance between what is said and what is known to be true has become an abyss. Of all the things at risk, the loss of an objective reality is perhaps the most dangerous. The death of truth is the ultimate victory of evil. When truth leaves us, when we let it slip away, when it is ripped from our hands, we become vulnerable to the appetite of whatever monster screams the loudest. This Chamber’s hold on the truth was finally lost on the Ghorman Plaza. What took place yesterday… what happened yesterday on Ghorman was unprovoked genocide! Yes! Genocide! And that truth has been exiled from this chamber! And the monster screaming the loudest? The monster we’ve helped create? The monster who will come for us all soon enough is Emperor Palpatine!"*
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+ - Mon Mothma, 2 BBY
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
+This is a game of  fiction. Certain corporation, please do not sue me.
+For more information on the politics and government of the Galactic Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
 
-For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
-
-**If you are playing this mod via the Mod Loader in base game, there will be various items missing (parliament colours, images, arrows, etc.). For the intended experience, please play using <a href="https://originn0.github.io/dynamic_social_democracy/" style="color: #0077FF">this</a> link.**
-
-- @1928_mod_mode: Begin (<span style="color: #0077FF;">dynamic</span> mode)
-- @1928_easy: Begin (<span style="color: #5B9A8D;">easy</span> difficulty)
-- @1928_main: Begin (<span style="color: #C4B156;">normal</span> difficulty)
-- @1928_hard: Begin (<span style="color: #A05252;">hard</span> difficulty)
-- @1928_historical: Begin (<span style="color: #611813;">historical</span> mode)
-- @1928_challenge: Custom Modes
+- @1928_easy: Begin (easy difficulty)
+- @1928_main: Begin (normal difficulty)
+- @1928_hard: Begin (hard difficulty)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 5; base_dues = 5; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; ddp_relation = 65; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 3; base_dues = 3; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; ddp_relation = 50; budget = 3
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31;
 go-to: 1928_main
-
-@1928_historical
-subtitle: Saving, loading, and polls will be disabled. [? if not achievement_game_completed: Not recommended for a first playthrough. ?]
-on-arrival: {!
-Q.difficulty = 2;
-Q.historical_mode = 1;
-Q.resources = 2;
-Q.dues = 2;
-Q.base_dues = 2;
-Q.rb_strength = 2000;
-Q.reformist_dissent = 25;
-Q.left_dissent = 30;
-Q.labor_dissent = 25;
-Q.center_dissent = 25;
-Q.z_relation = 41;
-Q.kpd_relation = 16;
-Q.dvp_relation = 31;
-Q.ddp_relation = 55;
-Q.budget = 2;
-this.state.disableSaves = true;
-!}
-go-to: 1928_main
-
-@1928_mod_mode
-subtitle: Intended way of experiencing this mod.
-on-arrival: {!
-Q.difficulty = -1;
-Q.dynamic_mode = 1;
-Q.resources = 3;
-Q.dues = 3;
-Q.base_dues = 3;
-Q.rb_strength = 2000;
-Q.z_relation = 41;
-Q.kpd_relation = 21;
-Q.dvp_relation = 31;
-Q.ddp_relation = 55;
-Q.budget = 2;
-!}
-go-to: 1928_main
-
-@1928_mod_mode_lite
-subtitle: Intended way of experiencing this mod.
-on-arrival: {!
-Q.difficulty = -1;
-Q.resources = 3;
-Q.dues = 3;
-Q.base_dues = 3;
-Q.rb_strength = 2000;
-Q.z_relation = 41;
-Q.kpd_relation = 21;
-Q.dvp_relation = 31;
-Q.ddp_relation = 55;
-Q.budget = 2;
-!}
-go-to: 1928_main
-
-@1928_challenge
-view-if: achievement_holy
-
-Here, you can test your skills.
-
-- @joever_mode
-- @hitler_mode
-- @unemployed_mode
-- @start: Go back.
-
-
-@joever_mode
-title: <div style="text-align: center;"><img src="img/joever.png" alt="Joever"></div>
-subtitle: The <span style="color: #c00000;">**SPD**</span> will start with 0% support.
-on-arrival: {!
-Q.workers_spd = 0;
-Q.new_middle_spd = 0;
-Q.old_middle_spd = 0;
-Q.rural_spd = 0;
-Q.catholics_spd = 0;
-Q.unemployed_spd = 0;
-
-for (var c of Q.classes) {
-    var class_votes = 0;
-    for (var party of Q.parties) {
-        if (Q[c+'_'+party] < 0) {
-            Q[c+'_'+party] = 0;
-        }
-        class_votes += Q[c+'_'+party];
-    }
-    for (var party of Q.parties) {
-        Q[c + '_' + party + '_normalized'] = 100*Q[c+'_'+party]/class_votes;
-        Q[c + '_' + party + '_display'] = Math.round(100*Q[c+'_'+party]/class_votes);
-    }
-}
-
-var total_support = 0; 
-
-for (var party of Q.parties) {
-    var party_support = 0;
-    for (var c of Q.classes) {
-        if (Q.old_demographics) { 
-            party_support += Q[c]*Q[c+'_'+party];
-        } else  { 
-            party_support += Q[c]*Q[c+'_'+party+'_normalized'];
-        } 
-    }
-    Q[party + '_support'] = party_support;
-    total_support += party_support; 
-    if (party == "nsdap" && Q.nsdap_split) {
-        Q.nsdap_hitler_support = Q.rural_nsdap_normalized*Q.rural;
-        Q.nsdap_hitler_support += Q.old_middle_nsdap_normalized*Q.old_middle;
-        Q.nsdap_hitler_support += Q.catholics_nsdap_normalized*Q.catholics;
-
-        if (Q.dsu_exist && !Q.nvf_exist) {
-            Q.dsu_support = Q.workers_nsdap*Q.workers*((120 - Q.sa_force) / 100);
-            Q.dsu_support += Q.unemployed_nsdap*Q.unemployed*((80 - Q.sa_force) / 100);
-            Q.dsu_support += Q.new_middle_nsdap*Q.new_middle;
-        } else if (!Q.dsu_exist && Q.nvf_exist) {
-            Q.nvf_support = Q.unemployed_nsdap*Q.unemployed*((120 - Q.sa_force) / 100);
-            Q.nvf_support += Q.workers_nsdap*Q.workers*((Q.sa_force - 80) / 100);
-            Q.nvf_support += Q.new_middle_nsdap*Q.new_middle;
-        } else if (Q.dsu_exist && Q.nvf_exist) {
-            Q.dsu_support = Q.workers_nsdap*Q.workers*((120 - Q.sa_force) / 100);
-            Q.dsu_support += Q.unemployed_nsdap*Q.unemployed*((80 - Q.sa_force) / 100);
-            Q.dsu_support += Q.new_middle_nsdap*Q.new_middle;
-
-            Q.nvf_support = Q.unemployed_nsdap*Q.unemployed*((120 - Q.sa_force) / 100);
-            Q.nvf_support += Q.workers_nsdap*Q.workers*((Q.sa_force - 80) / 100);
-        } else {
-            Q.nsdap_hitler_support += Q.workers_nsdap*Q.workers;
-            Q.nsdap_hitler_support += Q.unemployed_nsdap*Q.unemployed;
-            Q.nsdap_hitler_support += Q.new_middle_nsdap*Q.new_middle;
-        }
-    }
-}
-for (var party of Q.parties) {
-    Q[party+'_normalized'] = Q[party + '_support']/total_support;
-    if (party == "nsdap" && Q.nsdap_split) {
-        Q.nsdap_hitler_normalized = Q.nsdap_hitler_support / total_support;
-        Q.dsu_normalized = Q.dsu_support / total_support;
-        Q.nvf_normalized = Q.nvf_support / total_support;
-        Q.nsdap_hitler_votes = Math.round(Q.nsdap_hitler_normalized*1000) / 10;
-        Q.dsu_votes = Math.round(Q.dsu_normalized*1000) / 10;
-        Q.nvf_votes = Math.round(Q.nvf_normalized*1000) / 10;
-    }
-    Q[party+'_votes'] = Math.round(Q[party+'_normalized']*1000)/ 10;
-}
-!}
-go-to: 1928_mod_mode_lite
-
-@hitler_mode
-title: Democracy Under Siege
-subtitle: The <span style="color: #7A3C00;">**NSDAP**</span> will start with 40% support, and cannot peak.
-on-arrival: {!
-Q.hitler_mode = 1;
-
-Q.workers_nsdap = 30;
-Q.new_middle_nsdap = 200;
-Q.old_middle_nsdap = 200;
-Q.rural_nsdap = 135;
-Q.catholics_nsdap = 30;
-Q.unemployed_nsdap = 80;
-
-for (var c of Q.classes) {
-    var class_votes = 0;
-    for (var party of Q.parties) {
-        if (Q[c+'_'+party] < 0) {
-            Q[c+'_'+party] = 0;
-        }
-        class_votes += Q[c+'_'+party];
-    }
-    for (var party of Q.parties) {
-        Q[c + '_' + party + '_normalized'] = 100*Q[c+'_'+party]/class_votes;
-        Q[c + '_' + party + '_display'] = Math.round(100*Q[c+'_'+party]/class_votes);
-    }
-}
-
-var total_support = 0; 
-
-for (var party of Q.parties) {
-    var party_support = 0;
-    for (var c of Q.classes) {
-        if (Q.old_demographics) { 
-            party_support += Q[c]*Q[c+'_'+party];
-        } else  { 
-            party_support += Q[c]*Q[c+'_'+party+'_normalized'];
-        } 
-    }
-    Q[party + '_support'] = party_support;
-    total_support += party_support; 
-    if (party == "nsdap" && Q.nsdap_split) {
-        Q.nsdap_hitler_support = Q.rural_nsdap_normalized*Q.rural;
-        Q.nsdap_hitler_support += Q.old_middle_nsdap_normalized*Q.old_middle;
-        Q.nsdap_hitler_support += Q.catholics_nsdap_normalized*Q.catholics;
-
-        if (Q.dsu_exist && !Q.nvf_exist) {
-            Q.dsu_support = Q.workers_nsdap*Q.workers*((120 - Q.sa_force) / 100);
-            Q.dsu_support += Q.unemployed_nsdap*Q.unemployed*((80 - Q.sa_force) / 100);
-            Q.dsu_support += Q.new_middle_nsdap*Q.new_middle;
-        } else if (!Q.dsu_exist && Q.nvf_exist) {
-            Q.nvf_support = Q.unemployed_nsdap*Q.unemployed*((120 - Q.sa_force) / 100);
-            Q.nvf_support += Q.workers_nsdap*Q.workers*((Q.sa_force - 80) / 100);
-            Q.nvf_support += Q.new_middle_nsdap*Q.new_middle;
-        } else if (Q.dsu_exist && Q.nvf_exist) {
-            Q.dsu_support = Q.workers_nsdap*Q.workers*((120 - Q.sa_force) / 100);
-            Q.dsu_support += Q.unemployed_nsdap*Q.unemployed*((80 - Q.sa_force) / 100);
-            Q.dsu_support += Q.new_middle_nsdap*Q.new_middle;
-
-            Q.nvf_support = Q.unemployed_nsdap*Q.unemployed*((120 - Q.sa_force) / 100);
-            Q.nvf_support += Q.workers_nsdap*Q.workers*((Q.sa_force - 80) / 100);
-        } else {
-            Q.nsdap_hitler_support += Q.workers_nsdap*Q.workers;
-            Q.nsdap_hitler_support += Q.unemployed_nsdap*Q.unemployed;
-            Q.nsdap_hitler_support += Q.new_middle_nsdap*Q.new_middle;
-        }
-    }
-}
-for (var party of Q.parties) {
-    Q[party+'_normalized'] = Q[party + '_support']/total_support;
-    if (party == "nsdap" && Q.nsdap_split) {
-        Q.nsdap_hitler_normalized = Q.nsdap_hitler_support / total_support;
-        Q.dsu_normalized = Q.dsu_support / total_support;
-        Q.nvf_normalized = Q.nvf_support / total_support;
-        Q.nsdap_hitler_votes = Math.round(Q.nsdap_hitler_normalized*1000) / 10;
-        Q.dsu_votes = Math.round(Q.dsu_normalized*1000) / 10;
-        Q.nvf_votes = Math.round(Q.nvf_normalized*1000) / 10;
-    }
-    Q[party+'_votes'] = Math.round(Q[party+'_normalized']*1000)/ 10;
-}
-!}
-go-to: 1928_mod_mode_lite
-
-@unemployed_mode
-title: <div style="text-align: center;"><img src="img/job.png" alt="Jobless Mode"></div>
-subtitle: Unemployment will start at 100%.
-on-arrival: {!
-Q.jobless_mode = 1;
-
-Q.unemployed = 100;
-
-for (var c of Q.classes) {
-    var class_votes = 0;
-    for (var party of Q.parties) {
-        if (Q[c+'_'+party] < 0) {
-            Q[c+'_'+party] = 0;
-        }
-        class_votes += Q[c+'_'+party];
-    }
-    for (var party of Q.parties) {
-        Q[c + '_' + party + '_normalized'] = 100*Q[c+'_'+party]/class_votes;
-        Q[c + '_' + party + '_display'] = Math.round(100*Q[c+'_'+party]/class_votes);
-    }
-}
-
-var total_support = 0; 
-
-for (var party of Q.parties) {
-    var party_support = 0;
-    for (var c of Q.classes) {
-        if (Q.old_demographics) { 
-            party_support += Q[c]*Q[c+'_'+party];
-        } else  { 
-            party_support += Q[c]*Q[c+'_'+party+'_normalized'];
-        } 
-    }
-    Q[party + '_support'] = party_support;
-    total_support += party_support; 
-    if (party == "nsdap" && Q.nsdap_split) {
-        Q.nsdap_hitler_support = Q.rural_nsdap_normalized*Q.rural;
-        Q.nsdap_hitler_support += Q.old_middle_nsdap_normalized*Q.old_middle;
-        Q.nsdap_hitler_support += Q.catholics_nsdap_normalized*Q.catholics;
-
-        if (Q.dsu_exist && !Q.nvf_exist) {
-            Q.dsu_support = Q.workers_nsdap*Q.workers*((120 - Q.sa_force) / 100);
-            Q.dsu_support += Q.unemployed_nsdap*Q.unemployed*((80 - Q.sa_force) / 100);
-            Q.dsu_support += Q.new_middle_nsdap*Q.new_middle;
-        } else if (!Q.dsu_exist && Q.nvf_exist) {
-            Q.nvf_support = Q.unemployed_nsdap*Q.unemployed*((120 - Q.sa_force) / 100);
-            Q.nvf_support += Q.workers_nsdap*Q.workers*((Q.sa_force - 80) / 100);
-            Q.nvf_support += Q.new_middle_nsdap*Q.new_middle;
-        } else if (Q.dsu_exist && Q.nvf_exist) {
-            Q.dsu_support = Q.workers_nsdap*Q.workers*((120 - Q.sa_force) / 100);
-            Q.dsu_support += Q.unemployed_nsdap*Q.unemployed*((80 - Q.sa_force) / 100);
-            Q.dsu_support += Q.new_middle_nsdap*Q.new_middle;
-
-            Q.nvf_support = Q.unemployed_nsdap*Q.unemployed*((120 - Q.sa_force) / 100);
-            Q.nvf_support += Q.workers_nsdap*Q.workers*((Q.sa_force - 80) / 100);
-        } else {
-            Q.nsdap_hitler_support += Q.workers_nsdap*Q.workers;
-            Q.nsdap_hitler_support += Q.unemployed_nsdap*Q.unemployed;
-            Q.nsdap_hitler_support += Q.new_middle_nsdap*Q.new_middle;
-        }
-    }
-}
-for (var party of Q.parties) {
-    Q[party+'_normalized'] = Q[party + '_support']/total_support;
-    if (party == "nsdap" && Q.nsdap_split) {
-        Q.nsdap_hitler_normalized = Q.nsdap_hitler_support / total_support;
-        Q.dsu_normalized = Q.dsu_support / total_support;
-        Q.nvf_normalized = Q.nvf_support / total_support;
-        Q.nsdap_hitler_votes = Math.round(Q.nsdap_hitler_normalized*1000) / 10;
-        Q.dsu_votes = Math.round(Q.dsu_normalized*1000) / 10;
-        Q.nvf_votes = Math.round(Q.nvf_normalized*1000) / 10;
-    }
-    Q[party+'_votes'] = Math.round(Q[party+'_normalized']*1000)/ 10;
-}
-!}
-go-to: 1928_mod_mode_lite
-
-@wacky_weimar
-title: Wacky Weimar Mode
-subtitle: Various unrealistic easter eggs and features will be unlocked. Bugs are part of the experience.
-unavailable-subtitle: 66% or higher achievement completion is required.
-choose-if: achievement_moly
-on-arrival: {!
-Q.wacky_weimar = 1;
-!}
-go-to: 1928_mod_mode_lite
-
 
 @1928_main
-audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3 music/1928_1933/SozialistenMarsch.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
+= 32 BBY
 
-= 1928
+Turmoil has engulfed the
+<span style="color: #882200;">Galactic Republic</span>. The taxation
+of trade routes to outlying star
+systems is in dispute.
+
+Hoping to resolve the matter
+with a blockade of deadly
+battleships, the greedy <span style="color: #15155f;">Trade Federation</span> has stopped all
+shipping to the small planet
+of <span style="color: #65a5aa;">Naboo</span>.
+
+While the <span style="color: #30436e;">Galactic Senate</span> endlessly debates
+this alarming chain of events,
+the Supreme Chancellor has
+secretly dispatched two <span style="color: #36231b;">Jedi Knights</span>, the guardians of
+peace and justice in the
+galaxy, to settle the conflict…
